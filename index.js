@@ -3,10 +3,10 @@ const express = require("express");
 const mysql = require("mysql");
   const app = express();
 const pool = mysql.createPool({
-     host: process.env.DB_HOST,
-     user: prosses.env.DB_USER,
-     password: process.env.DB_PASS,
-     database: process.env.DB_NAME
+    host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_NAME
  });
 
  app.get("/api/materials", (req, res) => {
