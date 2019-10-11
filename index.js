@@ -12,7 +12,7 @@ const pool = mysql.createPool({
 
  app.get("/api/hardware/:id", (req, res) => {
      pool.query(
-         "SELECT material_id, material_name,material_prize FROM materials WHERE id = ?",
+         "SELECT material_id, material_name,material_prize FROM materials WHERE material_id = ?",
          [req.params.id],
       (error, rows) => {
          if (error) {
